@@ -9,6 +9,11 @@
 - [ ] CenterNet
 - [ ] Matrtix Nets
 
+## Backbone
+- [ ] MobileNetV2
+- [ ] MobileNetV3
+- [ ] EfficientNet
+
 
 ## Components
 - [ ] Soft-NMS
