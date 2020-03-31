@@ -1,0 +1,19 @@
+_BASE_: "Base-RCNN-MobileNet-FPN.yaml"
+MODEL:
+  WEIGHTS: "https://www.dropbox.com/s/yduxbc13s3ip6qn/mobilenet_v2_detectron2.pth?dl=1"
+  MASK_ON: False
+  RESNETS:
+    NORM: "GN"
+  FPN:
+    OUT_CHANNELS: 128
+    #SOLVER:
+    #  STEPS: (210000, 250000)
+    #  MAX_ITER: 270000
+  ROI_HEADS:
+    NAME: CascadeROIHeads
+  ROI_BOX_HEAD:
+    CLS_AGNOSTIC_BBOX_REG: True
+    NORM: "GN"
+  RPN:
+    POST_NMS_TOPK_TRAIN: 2000
+OUTPUT_DIR: "checkpoints/CRCN-MNv2-FPNLite-gn_1x"
