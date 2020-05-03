@@ -8,6 +8,7 @@
 - [ ] ConerNet
 - [ ] CenterNet
 - [ ] Matrtix Nets
+- [ ] EfficientDet
 
 ## Backbone
 - [ ] MobileNetV2
