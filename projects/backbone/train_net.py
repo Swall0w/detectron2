@@ -4,9 +4,9 @@ VoVNet Training Script.
 
 This script is a simplified version of the training script in detectron2/tools.
 """
-from comet_ml import Experiment
-experiment = Experiment(api_key="b68YeC38edhf5iioaPlmZiClK",
-                                project_name="detectron2", workspace="swall0w")
+#from comet_ml import Experiment
+#experiment = Experiment(api_key="b68YeC38edhf5iioaPlmZiClK",
+#                                project_name="detectron2", workspace="swall0w")
 
 import os
 

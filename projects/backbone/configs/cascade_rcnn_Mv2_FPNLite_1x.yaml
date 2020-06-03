@@ -1,6 +1,7 @@
 _BASE_: "Base-RCNN-MobileNet-FPN.yaml"
 MODEL:
-  WEIGHTS: "https://www.dropbox.com/s/yduxbc13s3ip6qn/mobilenet_v2_detectron2.pth?dl=1"
+  #WEIGHTS: "https://www.dropbox.com/s/yduxbc13s3ip6qn/mobilenet_v2_detectron2.pth?dl=1"
+  WEIGHTS: "/home/masato/mobilenet_v2_detectron2.pth"
   MASK_ON: False
   FPN:
     OUT_CHANNELS: 128
@@ -13,4 +14,9 @@ MODEL:
     CLS_AGNOSTIC_BBOX_REG: True
   RPN:
     POST_NMS_TOPK_TRAIN: 2000
+SOLVER:
+  IMS_PER_BATCH: 32
+  BASE_LR: 0.04
+  STEPS: (30000, 40000)
+  MAX_ITER: 45000
 OUTPUT_DIR: "checkpoints/CRCN-MNv2-FPNLite-3x"
